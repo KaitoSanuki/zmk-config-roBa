@@ -129,7 +129,7 @@
             bindings = <
 &kp DOLLAR                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS                                                   &kp JP_AMPERSAND  &kp JP_LPAREN  &kp JP_RPAREN  &kp JP_QUOTE   &kp JP_COLON
 &kp PERCENT                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp JP_UNDERSCORE  &kp JP_PIPE       &kp JP_LBRACKET      &kp JP_RBRACKET      &kp JP_DQUOTE  &kp SEMI
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL     &kp BACKSLASH                &kp HASH        &kp EXCL       &kp JP_LBRACE        &kp JP_RBRACE        &kp JP_BACKQUOTE          &mt RIGHT_SHIFT TILDE
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL     &kp JP_YEN                &kp HASH        &kp EXCL       &kp JP_LBRACE        &kp JP_RBRACE        &kp JP_BACKQUOTE          &mt RIGHT_SHIFT JP_TILDE
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                         &kp JP_CARET
             >;
         };
