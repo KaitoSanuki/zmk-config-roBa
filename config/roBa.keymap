@@ -110,6 +110,19 @@
         };
     };
 
+    behaviors {
+       to0_hold_mo: to0_hold_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TO0_HOLD_MO";
+            #binding-cells = <1>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+
+            bindings = <&to0>, <&mo>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
