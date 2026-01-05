@@ -1,6 +1,7 @@
 // ========================================
 // JIS Keyboard Layout Definitions
 // ========================================
+
 #define JP_DQUOTE           AT                  // "
 #define JP_AMPERSAND        CARET               // &
 #define JP_QUOTE            AMPERSAND           // '
@@ -90,14 +91,34 @@
             label = "TO_LAYER_0";
         };
     };
-　　macros {
- 　　　 to0: to0 {
-  　　 　　 compatible = "zmk,behavior-macro";
-   　　　　 #binding-cells = <0>;
-   　　　　 bindings = <&to 0>;
-  　　　　  label = "TO_0";
-  　　　};
-　　};
+
+    　　
+
+    macros {
+        　　　
+
+        to0: to0 {
+            　　 　　
+
+            compatible = "zmk,behavior-macro";
+
+            　　　　 #
+
+            binding-cells = <0>;
+
+            　　　　
+
+            bindings = <&to 0>;
+
+            　　　　
+
+            label = "TO_0";
+
+            　　　
+        };
+
+        　　
+    };
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -111,14 +132,12 @@
     };
 
     behaviors {
-       to0_hold_mo: to0_hold_mo {
+        to0_hold_mo: to0_hold_mo {
             compatible = "zmk,behavior-hold-tap";
             label = "TO0_HOLD_MO";
             #binding-cells = <1>;
-
             tapping-term-ms = <200>;
             flavor = "balanced";
-
             bindings = <&to0>, <&mo>;
         };
     };
@@ -128,10 +147,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W         &kp E         &kp R                        &kp T                                                 &kp Y      &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &mkp MB3                  &kp MINUS      &kp H      &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp PRINTSCREEN           &kp JP_AT         &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 TAB      &kp BACKSPACE  &kp SPACE                             &kp DEL
+&mt ESCAPE Q      &kp W         &kp E         &kp R                        &kp T                                                      &kp Y      &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                        &kp G             &mkp MB3                  &kp MINUS      &kp H      &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B             &kp PRINTSCREEN           &kp JP_AT      &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &to0_hold_mo 0 2  &lt_to_layer_0 3 TAB      &kp BACKSPACE  &kp SPACE                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -148,10 +167,10 @@
 
         NUM {
             bindings = <
-&kp DOLLAR                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS                                                   &kp JP_AMPERSAND  &kp JP_LPAREN  &kp JP_RPAREN  &kp JP_QUOTE   &kp JP_COLON
-&kp PERCENT                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp JP_UNDERSCORE  &kp JP_PIPE       &kp JP_LBRACKET      &kp JP_RBRACKET      &kp JP_DQUOTE  &kp SEMI
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL     &kp JP_YEN                &kp HASH        &kp EXCL       &kp JP_LBRACE        &kp JP_RBRACE        &kp JP_BACKQUOTE          &mt RIGHT_SHIFT JP_TILDE
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                         &kp JP_CARET
+&kp DOLLAR                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS                                                      &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_QUOTE      &kp JP_COLON
+&kp PERCENT                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp JP_UNDERSCORE  &kp JP_PIPE       &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_DQUOTE     &kp SEMI
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL     &kp JP_YEN                   &kp HASH           &kp EXCL          &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_BACKQUOTE  &mt RIGHT_SHIFT JP_TILDE
+&trans                      &trans           &trans           &trans           &trans           &trans                       &trans             &trans                                                                &kp JP_CARET
             >;
         };
 
