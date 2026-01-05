@@ -90,6 +90,14 @@
             label = "TO_LAYER_0";
         };
     };
+　　macros {
+ 　　　 to0: to0 {
+  　　 　　 compatible = "zmk,behavior-macro";
+   　　　　 #binding-cells = <0>;
+   　　　　 bindings = <&to 0>;
+  　　　　  label = "TO_0";
+  　　　};
+　　};
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
